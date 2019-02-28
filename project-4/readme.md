@@ -5,14 +5,29 @@
 **A Mobile Chat Application (using React-Native)**
 
 ### Installation (For Opening in Android)
+#### Front-End Set Up
 * **Downloading the Application** 
-using git clone https://github.com/john-97/wdi-17.git, then traversing into the Project 4 folder.
+using git clone https://github.com/john-97/wdi-17.git
 * **Downloading Android Studio** 
 This shouldnt be tough following the instructions at this Web Page: https://facebook.github.io/react-native/docs/getting-started 
+* **Opening AVD(Android Virtual Device)** 
+open Android Studio, click on the **configure** button, open **AVD Manager**, start AVD by clicking the Play button.
 * **Downloading React-Native** ```npm install -g react-native-cli```
-* **Front**
-* **Front**
-* **Front**
+* **Starting Front-End Development Server** 
+Go into your cloned folder before doing the following:
+```
+cd project-4/client
+npm install
+npm run start
+```
+* **Starting Backend**
+Go into your cloned folder before doing the following:
+```
+cd project-4/server
+npm install --save-dev nodemon
+npm install
+nodemon
+```
 
 ### Technologies
 
