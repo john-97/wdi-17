@@ -1,9 +1,5 @@
 # Chattie (A Mobile Chat Application)
 
-### Overview
-
-**A Mobile Chat Application (using React-Native)**
-
 ### Installation (For Opening in Android)
 #### Front-End Set Up
 * **Downloading the Application** 
@@ -14,7 +10,7 @@ This shouldnt be tough following the instructions at this Web Page: https://face
 open Android Studio, click on the **configure** button, open **AVD Manager**, start AVD by clicking the Play button.
 * **Downloading React-Native** ```npm install -g react-native-cli```
 * **Starting Front-End Development Server** 
-Go into your cloned folder before doing the following:
+Go into the root of the cloned folder before doing the following:
 ```
 cd project-4/client
 npm install
@@ -22,17 +18,21 @@ react-native unlink
 react-native link
 npm run start
 ```
+#### Back-End Set Up
 * **Starting Backend**
-Go into your cloned folder before doing the following:
+Go into the root of the cloned folder before doing the following:
 ```
 cd project-4/server
 npm install --save-dev nodemon
 npm install
 nodemon
 ```
+---
+### Overview
+####A Mobile Chat Application (using React-Native)
+---
 
 ### Technologies
-
 * **Front-End** Uses React-Native, with React-Navigation, GeoLocation, Redux, Android Contacts and Permissions, and Socket.io.
 * **Back-End** Uses Node.js, Postgresql, and socket.IO
 * **UX (User Xperience)** 
