@@ -29,7 +29,7 @@ nodemon
 ```
 ---
 ### Overview
-####A Mobile Chat Application (using React-Native)
+#### A Mobile Chat Application (using React-Native)
 ---
 
 ### Technologies
