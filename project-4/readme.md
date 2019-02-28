@@ -18,6 +18,8 @@ Go into your cloned folder before doing the following:
 ```
 cd project-4/client
 npm install
+react-native unlink
+react-native link
 npm run start
 ```
 * **Starting Backend**
