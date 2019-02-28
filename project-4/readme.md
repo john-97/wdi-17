@@ -9,6 +9,16 @@ This shouldnt be tough following the instructions at this Web Page: https://face
 * **Opening AVD(Android Virtual Device)** 
 open Android Studio, click on the **configure** button, open **AVD Manager**, start AVD by clicking the Play button.
 * **Downloading React-Native** ```npm install -g react-native-cli```
+* **Changing Configuration** 
+Go into the root of the cloned folder before doing the following:
+```
+cd project-4/client
+nano package.json
+// change the scripts.start string's first "export PATH command" to your Android sdk's path
+cd project-4/client/android
+nano local.properties
+// change the sdk.dir variable to your Android sdk path
+```
 * **Starting Front-End Development Server** 
 Go into the root of the cloned folder before doing the following:
 ```
