@@ -1,18 +1,26 @@
-# Chattie
+# Chattie (A Mobile Chat Application)
 
 ### Overview
 
 **A Mobile Chat Application (using React-Native)**
 
-
+### Installation
+* **Downloading the Application** using git clone
+* **Front**
+* **Front**
+* **Front**
+* **Front**
+* **Front**
 
 ### Technologies
 
 * **Front-End** Uses React-Native, with React-Navigation, GeoLocation, Redux, Android Contacts and Permissions, and Socket.io.
 * **Back-End** Uses Node.js, Postgresql, and socket.IO
 * **UX (User Xperience)** 
-* **Use a database** or way to store your data, whether that's one we've covered in class or one you want to learn
-* **Implement thoughtful user stories** that are significant enough to help you know which features to build and which to scrap
+
+### Main Features
+* **Chat Function** Socket.IO and Socket.IO-Client was used to send information in real-time without any hard reloads or distinct AJAX request, which is pivotal in a chat-application
+* **Implement thoughtful user stories** 
 * **Be deployed online** so it's publicly accessible
 
 ---
