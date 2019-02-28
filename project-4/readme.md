@@ -1,15 +1,29 @@
 # Chattie (A Mobile Chat Application)
 
+---
+
+### Overview
+#### A Mobile Chat Application (using React-Native)
+A Mobile Chat Application with real-time updates of chat messages and time-zone based recorded times and messages. It has been configured mainly for Android but can be adapted for IOS systems easily. The images following is meant to give an idea as to how the main functions in the Applications functions and works.
+
+#### Contents
+* **Overview** 
+* **Installation** 
+* **Main Technologies Used** 
+* **My Developer Resume** 
+* **Other Projects** 
+
+---
+
 ### Installation (For Opening in Android)
 #### Front-End Set Up
 * **Downloading the Application** 
 using git clone https://github.com/john-97/wdi-17.git
 * **Downloading Android Studio** 
-This shouldnt be tough following the instructions at this Web Page: https://facebook.github.io/react-native/docs/getting-started 
+This shouldnt be tough following the instructions at this Web Page, under the tab **Building Projects with Native Code**: https://facebook.github.io/react-native/docs/getting-started 
 * **Opening AVD(Android Virtual Device)** 
 open Android Studio, click on the **configure** button, open **AVD Manager**, start AVD by clicking the Play button.
-* **Downloading React-Native** ```npm install -g react-native-cli```
-* **Changing Configuration** 
+* **Changing Android Configuration** 
 Go into the root of the cloned folder before doing the following:
 ```
 cd project-4/client
@@ -17,12 +31,13 @@ nano package.json
 // change the scripts.start string's first "export PATH command" to your Android sdk's path
 cd project-4/client/android
 nano local.properties
-// change the sdk.dir variable to your Android sdk path
+// change the sdk.dir variable to your Android sdk's path
 ```
 * **Starting Front-End Development Server** 
 Go into the root of the cloned folder before doing the following:
 ```
 cd project-4/client
+npm install -g react-native-cli
 npm install
 react-native unlink
 react-native link
@@ -37,18 +52,14 @@ npm install --save-dev nodemon
 npm install
 nodemon
 ```
----
-### Overview
-#### A Mobile Chat Application (using React-Native)
----
 
 ### Technologies
-* **Front-End** Uses React-Native, with React-Navigation, GeoLocation, Redux, Android Contacts and Permissions, and Socket.io.
+* **Front-End** Uses React-Native, with React-Navigation, Redux, Moment.js, Android Contacts and Permissions, and Socket.io.
 * **Back-End** Uses Node.js, Postgresql, and socket.IO
-* **UX (User Xperience)** 
 
 ### Main Features
-* **Chat Function** Socket.IO and Socket.IO-Client was used to send information in real-time without any hard reloads or distinct AJAX request, which is pivotal in a chat-application
+* **Chat Function** 
+Socket.IO and Socket.IO-Client was used to send information in real-time without any hard reloads or distinct AJAX request, which is pivotal in a chat-application
 * **Implement thoughtful user stories** 
 * **Be deployed online** so it's publicly accessible
 
