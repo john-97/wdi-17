@@ -4,10 +4,10 @@
 
 **A Mobile Chat Application (using React-Native)**
 
-### Installation
-* **Downloading the Application** using git clone
-* **Front**
-* **Front**
+### Installation (For Opening in Android)
+* **Downloading the Application** using git clone https://github.com/john-97/wdi-17.git, then traversing into the Project 4 folder where this Project is.
+* **Downloading Android Studio** This shouldnt be tough following the instructions at this Web Page: https://facebook.github.io/react-native/docs/getting-started 
+* **Downloading React-Native** ```npm install -g react-native-cli```
 * **Front**
 * **Front**
 * **Front**
