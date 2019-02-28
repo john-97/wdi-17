@@ -1,24 +1,16 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #4
+# Chattie
 
 ### Overview
 
-**The time has come for the final project.**
+**A Mobile Chat Application (using React-Native)**
 
-This is your capstone project, and as such is left the most open to you to decide which technologies are most suitable.
 
-Make sure you review your project proposal with your instructor so you can make sure it's **something you can accomplish in the limited time we have**, and make sure it's **something that'll showcase your skills both visually and functionally**. Sometimes people do judge a book by its cover – or an app by its design.
 
-If you want to deviate beyond the technologies and materials covered in the course, make sure to check in with your instructor first!
+### Technologies
 
----
-
-### Technical Requirements
-
-Your app must:
-
-* **Build a full-stack application** by making your own backend and your own front-end
-* **Have an interactive front-end**, preferably using a modern front-end framework.
-* **Be a complete product**, which means that it is usable from head-to-tail, in the environment it is meant for.
+* **Front-End** Uses React-Native, with React-Navigation, GeoLocation, Redux, Android Contacts and Permissions, and Socket.io.
+* **Back-End** Uses Node.js, Postgresql, and socket.IO
+* **UX (User Xperience)** 
 * **Use a database** or way to store your data, whether that's one we've covered in class or one you want to learn
 * **Implement thoughtful user stories** that are significant enough to help you know which features to build and which to scrap
 * **Be deployed online** so it's publicly accessible
