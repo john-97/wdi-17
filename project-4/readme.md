@@ -4,7 +4,7 @@
 
 ### Overview
 #### A Mobile Chat Application (using React-Native)
-A Mobile Chat Application with real-time updates of chat messages and time-zone based recorded times and messages. It has been configured mainly for Android but can be adapted for IOS systems easily. The images following is meant to give an idea as to how the main functions in the Applications functions and works.
+A Mobile Chat Application using a Node.js server with Postgresql Database. The Capstone Project for my General Assembly Web Development Immersive Programme, I found myself using much of what I have learnt with a mixture of Technologies to make an intuitively simple and yet considerably complex mobile application. Lets take a dive a little deeper into the App shall we???
 
 #### Contents
 * **Overview**
@@ -73,9 +73,16 @@ npm install
 nodemon
 ```
 
+---
+
 ### Technologies
-* **Front-End** Uses React-Native, with React-Navigation, Redux, Moment.js, Android Contacts and Permissions, and Socket.io.
-* **Back-End** Uses Node.js, Postgresql, and socket.IO
+#### Front-End 
+* React-Native & React-Navigation
+* Redux, Moment.js and Android Contacts and Permissions
+#### Back-End
+* Uses Node.js
+* Postgresql
+* socket.IO
 
 ### Main Features
 * **Chat Function** 
