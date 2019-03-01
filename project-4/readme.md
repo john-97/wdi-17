@@ -7,11 +7,11 @@
 A Mobile Chat Application with real-time updates of chat messages and time-zone based recorded times and messages. It has been configured mainly for Android but can be adapted for IOS systems easily. The images following is meant to give an idea as to how the main functions in the Applications functions and works.
 
 #### Contents
-* **Overview** 
-* **Installation** 
-* **Main Technologies Used** 
-* **My Developer Resume** 
-* **Other Projects** 
+* **Overview**
+* **Installation**
+* **Main Technologies**
+* **Resume**
+* **Other Projects**
 
 ---
 
@@ -44,7 +44,27 @@ react-native link
 npm run start
 ```
 #### Back-End Set Up
-* **Starting Backend**
+* **Postgresql Set Up**
+Go into the root of the cloned folder before doing the following:
+```
+// INSTALLING POSTGRESQL APP
+// Download and install from http://postgresapp.com/
+// Remember to input the correct postgres version in the export PATH
+ls -la /Applications/Postgres.app/Contents/Versions
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.5/bin
+
+// Setting up DataBase
+psql
+/connect {YOUR USERNAME}
+CREATE DATABASE chattie;
+\quit
+
+// Setting up dummy data
+cd project-4/server/dummy
+psql -U {YOUR USERNAME} -d chattie -f tables.sql
+psql -U {YOUR USERNAME} -d chattie -f seed.sql
+```
+* **Starting Backend Server**
 Go into the root of the cloned folder before doing the following:
 ```
 cd project-4/server

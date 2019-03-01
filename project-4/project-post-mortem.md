@@ -49,7 +49,6 @@ I think that my approach the React in general is something that I would like to 
 2. I would want my code to be leaner, I find myself redefining things like my navigation function
 
 
-
 1. What in my code and program design in the project went well? Is there anything I would do the same next time?
 ===========================================================================================
 
