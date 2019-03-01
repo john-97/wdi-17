@@ -92,4 +92,4 @@ Currently unavailable...
 ---
 
 ### About Me
-I have hosted some of my projects at jonathanchowjh.com and my Resume can be found at jonathanchowjh.com/resume
+I have hosted some of my projects at [jonathanchowjh.com](https://jonathanchowjh.com)and my Resume can be found at [I'm an inline-style link](https://jonathanchowjh.com/resume)
