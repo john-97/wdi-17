@@ -50,7 +50,8 @@ Go into the root of the cloned folder before doing the following:
 cd project-4/client
 npm install -g react-native-cli
 npm install
-react-native unlink
+react-native unlink react-native-contacts
+react-native unlink react-native-gesture-handler
 react-native link
 npm run start
 ```
@@ -92,4 +93,4 @@ Currently unavailable...
 ---
 
 ### About Me
-I have hosted some of my projects at [jonathanchowjh.com](https://jonathanchowjh.com)and my Resume can be found at [I'm an inline-style link](https://jonathanchowjh.com/resume)
+I have hosted some of my projects at [jonathanchowjh.com](https://jonathanchowjh.com) and my Resume can be found at [jonathanchowjh.com/resume](https://jonathanchowjh.com/resume)

@@ -1,0 +1,45 @@
+INSERT INTO users (username, password, online_status) VALUES ('jon', '1111', true);
+INSERT INTO users (username, password, online_status) VALUES ('eggie', '1111', true);
+INSERT INTO users (username, password, online_status) VALUES ('eggplant', '1111', true);
+INSERT INTO users (username, password, online_status) VALUES ('bebe', '1111', true);
+INSERT INTO users (username, password, online_status) VALUES ('shawn', '1111', true);
+INSERT INTO users (username, password, online_status) VALUES ('james', '1111', true);
+INSERT INTO users (username, password, online_status) VALUES ('honica', '1111', true);
+INSERT INTO users (username, password, online_status) VALUES ('wendy', '1111', true);
+INSERT INTO users (username, password, online_status) VALUES ('wenni', '1111', true);
+INSERT INTO users (username, password, online_status) VALUES ('jolyn', '1111', true);
+
+INSERT INTO chats (name) VALUES ('jumpy');
+INSERT INTO chats (name) VALUES ('eggies');
+INSERT INTO chats (name) VALUES ('jo');
+
+INSERT INTO chatsRT (chat_id, user_id) VALUES (1, 1);
+INSERT INTO chatsRT (chat_id, user_id) VALUES (1, 2);
+INSERT INTO chatsRT (chat_id, user_id) VALUES (2, 1);
+INSERT INTO chatsRT (chat_id, user_id) VALUES (2, 2);
+INSERT INTO chatsRT (chat_id, user_id) VALUES (2, 3);
+INSERT INTO chatsRT (chat_id, user_id) VALUES (2, 4);
+INSERT INTO chatsRT (chat_id, user_id) VALUES (3, 2);
+INSERT INTO chatsRT (chat_id, user_id) VALUES (3, 3);
+INSERT INTO chatsRT (chat_id, user_id) VALUES (3, 4);
+INSERT INTO chatsRT (chat_id, user_id) VALUES (3, 5);
+INSERT INTO chatsRT (chat_id, user_id) VALUES (3, 6);
+INSERT INTO chatsRT (chat_id, user_id) VALUES (3, 7);
+INSERT INTO chatsRT (chat_id, user_id) VALUES (2, 5);
+INSERT INTO chatsRT (chat_id, user_id) VALUES (2, 6);
+INSERT INTO chatsRT (chat_id, user_id) VALUES (2, 7);
+INSERT INTO chatsRT (chat_id, user_id) VALUES (2, 8);
+INSERT INTO chatsRT (chat_id, user_id) VALUES (2, 9);
+INSERT INTO chatsRT (chat_id, user_id) VALUES (2, 10);
+
+INSERT INTO messages (message, timestamp, user_id, chat_id) VALUES ('hi how r ya!!!', '2019-02-26T02:41:41.124Z', 1, 1);
+INSERT INTO messages (message, timestamp, user_id, chat_id) VALUES ('hi how r ya!!!', '2019-02-26T02:41:41.124Z', 1, 1);
+INSERT INTO messages (message, timestamp, user_id, chat_id) VALUES ('hi how r ya!!!','2019-02-26T02:41:41.124Z', 2, 1);
+INSERT INTO messages (message, timestamp, user_id, chat_id) VALUES ('hi how r ya!!!', '2019-02-26T02:41:41.124Z', 1, 1);
+INSERT INTO messages (message, timestamp, user_id, chat_id) VALUES ('hi how r ya!!!', '2019-02-26T02:41:41.124Z', 2, 1);
+INSERT INTO messages (message, timestamp, user_id, chat_id) VALUES ('hi how r ya!!!', '2019-02-26T02:41:41.124Z', 4, 2);
+INSERT INTO messages (message, timestamp, user_id, chat_id) VALUES ('hi how r ya!!!','2019-02-26T02:41:41.124Z', 5, 2);
+INSERT INTO messages (message, timestamp, user_id, chat_id) VALUES ('hi how r ya!!!','2019-02-26T02:41:41.124Z', 6, 2);
+INSERT INTO messages (message, timestamp, user_id, chat_id) VALUES ('hi how r ya!!!', '2019-02-26T02:41:41.124Z', 2, 3);
+INSERT INTO messages (message, timestamp, user_id, chat_id) VALUES ('hi how r ya!!!', '2019-02-26T02:41:41.124Z', 9, 3);
+INSERT INTO messages (message, timestamp, user_id, chat_id) VALUES ('hi how r ya!!!', '2019-02-26T02:41:41.124Z', 10, 3);

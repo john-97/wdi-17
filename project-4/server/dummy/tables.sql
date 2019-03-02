@@ -1,0 +1,28 @@
+DROP TABLE users;
+DROP TABLE chatsRT;
+DROP TABLE chats;
+DROP TABLE messages;
+
+
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL NOT NULL PRIMARY KEY,
+    username TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL,
+    online_status BOOLEAN NOT NULL
+);
+CREATE TABLE IF NOT EXISTS chatsRT (
+    id SERIAL NOT NULL PRIMARY KEY,
+    chat_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL
+);
+CREATE TABLE IF NOT EXISTS chats (
+    id SERIAL NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS messages (
+    id SERIAL NOT NULL PRIMARY KEY,
+    message TEXT NOT NULL,
+    timestamp TEXT NOT NULL,
+    user_id INTEGER NOT NULL,
+    chat_id INTEGER NOT NULL
+);
