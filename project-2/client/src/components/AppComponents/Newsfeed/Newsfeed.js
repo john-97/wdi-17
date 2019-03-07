@@ -44,13 +44,23 @@ class Newsfeed extends Component {
       // return list of post
       return(
         <div className="post" key={post.post_id}>
+          <div className="postHeader">
+            <img
+              src={user.profile_pic}
+              className="userIcon"
+              alt={user.name.charAt(0)}
+            />
+            <span className="postAuthor">{user.name} </span>
+          </div>
           <p className="postContent">{post.content}</p>
-          <p><span className="postAuthor">{user.name} </span>
-          <span>Likes: {post.likes.length}</span></p>
-          <button
-            onClick={()=>{this.handleClick("like", post)}}>
-            {like}
-          </button>
+          <div class="postFooter">
+            <button
+              onClick={()=>{this.handleClick("like", post)}}
+              className="likeButton">
+              {`Likes: ${post.likes.length} `}<span className={like}>{`${ like}`}</span>
+            </button>
+          </div>
+          
         </div>
       )
     })
@@ -101,10 +111,12 @@ class Newsfeed extends Component {
       <div>
         <div>
           <form 
+            className="newPost"
             name="newPost" 
             onSubmit={this.handleSubmit}
             autoComplete="off">
             <input 
+              style={{width: "300px"}}
               type="text"
               name="newPost"
               placeholder="What's Up!" 

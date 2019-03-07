@@ -85,6 +85,7 @@ body{
   text-align: start;
   height: 40px;
   position: relative;
+  border-radius: 50px;
 }
 button:focus{
   outline:0;
@@ -118,12 +119,94 @@ textarea:focus{
   background-color: rgb(221, 230, 233);
   margin: 5px;
   padding: 5px;
+  border-radius: 5px;
 }
 .New{
   color: rgb(13, 43, 141);
   font-weight: 600;
   font-size: 15px;
 }
-.ResumeEditInputsHidden{
 
+/*                Resume
+=============================================== */
+
+.ResumeContainer{
+  background: rgba(0, 116, 184, 0.1);
+  padding: 20px;
+  margin: 10px;
+  font-family: 'PT Serif', serif;
+  border-radius: 5px;
 }
+.ResumeHeading{
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 900;
+  padding-bottom: 10px;
+}
+.ResumeArrayHeading{
+  color: rgb(10, 2, 92);
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+.ResumeArrayDescription{
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #section-to-print, #section-to-print * {
+    visibility: visible;
+    width: 800px;
+  }
+}
+
+/*                Post
+=============================================== */
+.userIcon{
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  margin: 5px 10px;
+}
+.post{
+  background: rgb(255, 255, 255);
+  border: solid 1px rgb(204, 204, 204);
+  margin: 10px;
+  border-radius: 5px;
+}
+.postHeader{
+  background: rgb(224, 224, 224);
+  padding: 0 20px;
+}
+.postContent{
+  padding: 0 20px;
+  font-size: 15px;
+  font-family: 'PT Serif', serif;
+  overflow: hidden;
+}
+.postFooter{
+  padding: 0 20px;
+}
+.Like{
+  color: rgb(22, 22, 158);
+}
+.Unlike{
+  color: rgb(124, 27, 27);
+}
+.likeButton{
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  padding-bottom: 5px;
+  font-size: 15px;
+}
+.newPost{
+  margin: 10px;
+}
+input:focus{
+  outline:0;
+}
+
+/*                Chat
+=============================================== */

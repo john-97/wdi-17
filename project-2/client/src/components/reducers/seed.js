@@ -1,5 +1,4 @@
 const seed = {
-    test: "test",
     resume: {
         user:{
             name: 'Jonathan',

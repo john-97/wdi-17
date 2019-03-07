@@ -9,14 +9,27 @@ class Resume extends Component {
     this.generateEducationAndCredentials = this.generateEducationAndCredentials.bind(this)
     this.generateProfessionalExperience = this.generateProfessionalExperience.bind(this)
     this.generateOthers = this.generateOthers.bind(this)
+    this.paragraph = this.paragraph.bind(this)
+    this.handleClick = this.handleClick.bind(this)
+  }
+  paragraph(text){
+    let textArray = text.split("{paragraph}")
+    return textArray.map((para, num) => {
+      console.log(para)
+      return(<div key={num}>{para}</div>)
+    })
+  }
+  handleClick(e){
+    e.preventDefault();
+    window.print();
   }
   // generate resume
   generateSkills(){
     return this.props.store.resume.skills.map( (ele, num) => {
       return(
         <div key={num}>
-          <div>{ele.name}</div>
-          <div>{ele.description}</div>
+          <div className="ResumeArrayHeading">{ele.name}</div>
+          <div className="ResumeArrayDescription">{this.paragraph(ele.description)}</div>
         </div>
       )
     })
@@ -25,9 +38,11 @@ class Resume extends Component {
     return this.props.store.resume.professionalExperience.map((ele,num)=> {
       return(
         <div key={num}>
-          <div>{ele.name}</div>
-          <div>{ele.position}</div>
-          <div>{ele.description}</div>
+          <div className="ResumeArrayHeading">{ele.name}</div>
+          <div style={{
+            paddingBottom: "5px"
+          }}>{ele.position}</div>
+          <div className="ResumeArrayDescription">{this.paragraph(ele.description)}</div>
         </div>
       )
     })
@@ -36,8 +51,8 @@ class Resume extends Component {
     return this.props.store.resume.educationAndCredentials.map((ele,num)=> {
       return(
         <div key={num}>
-          <div>{ele.name}</div>
-          <div>{ele.description}</div>
+          <div className="ResumeArrayHeading">{ele.name}</div>
+          <div className="ResumeArrayDescription">{this.paragraph(ele.description)}</div>
         </div>
       )
     })
@@ -46,35 +61,61 @@ class Resume extends Component {
     return this.props.store.resume.others.map((ele,num)=> {
       return(
         <div key={num}>
-          <div>{ele.name}</div>
+          <div className="ResumeArrayHeading">{this.paragraph(ele.name)}</div>
         </div>
       )
     })
   }
   render() {
+    this.paragraph("this is a wonderful day. {paragraph} It is isnt it!!!")
     return (
       <div>
-        <div>
+        <div style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+          padding: "10px 30px 0px 30px"
+        }}>
           <NavLink 
+            style={{fontSize: "20px", fontWeight: 700, color: "rgb(17, 57, 122)"}}
             to={`/LinkedUp/resume/${this.props.store.user.user_id}/edit`}
           >
           EDIT YOUR RESUME
           </NavLink>
+          <div 
+            style={{fontSize: "20px", fontWeight: 700, color: "rgb(17, 57, 122)"}}
+            onClick={this.handleClick}
+            name="print" >
+            Print
+          </div>
         </div>
-        <div>
+        <div id="section-to-print">
           {/* HEADER */}
             
-            <div>
+            <div className="ResumeContainer">
+              <div style={{
+                 display: "flex",
+                 flexDirection: "row",
+                 justifyContent: "space-between",
+                 margin: "20px"
+              }}>
               <div>
-                <div>
+                <div style={{
+                  fontSize: "30px"
+                }}>
                   {this.props.store.resume.user.name}
                 </div>
-                <div>
+                <div style={{
+
+                }}>
                   {this.props.store.resume.description.position}
                 </div>
               </div>
               {/* contact Deets */}
-              <div>
+              <div style={{
+                textAlign: "right",
+                fontSize: "15px"
+              }}>
                 <div>
                   {this.props.store.resume.user.email}
                 </div>
@@ -85,20 +126,32 @@ class Resume extends Component {
                   {this.props.store.resume.user.phoneNumber}
                 </div>
               </div>
-              {/* description */}
-              <div>
-                {this.props.store.resume.description.description}
               </div>
-              <div>
+              {/* description */}
+              <div className="ResumeContainer" style={{
+                fontSize: "14px"
+              }}>
+                <div className="ResumeHeading">Description</div>
+                {this.paragraph(this.props.store.resume.description.description)}
+              </div>
+              {/* skills */}
+              <div className="ResumeContainer">
+                <div className="ResumeHeading">Skills</div>
                 {this.generateSkills()}
               </div>
-              <div>
+              {/* professionalExperience */}
+              <div className="ResumeContainer">
+                <div className="ResumeHeading">Professional Experience</div>
                 {this.generateProfessionalExperience()}
               </div>
-              <div>
+              {/* educationAndCredentials */}
+              <div className="ResumeContainer">
+                <div className="ResumeHeading">Education and Credentials</div>
                 {this.generateEducationAndCredentials()}
               </div>
-              <div>
+              {/* others */}
+              <div className="ResumeContainer">
+                <div className="ResumeHeading">Others</div>
                 {this.generateOthers()}
               </div>
             </div>
