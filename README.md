@@ -7,14 +7,14 @@ General Assembly's Web Development Immersive set forth 4 projects that acted as 
 
 These Projects were fun! And I am especially proud of project 2 & 4, and made efforts in improving them further and will continue to do so even after my time at WDI.
 
-####Main Projects:
+#### Main Projects:
 * **[LinkedUp (Job Search/ Social Media Portal)](https://github.com/john-97/wdi-17/tree/master/project-2)**
 * **[Chattie (Mobile Chat Application)](https://github.com/john-97/wdi-17/tree/master/project-4)**
 
-####Other Projects:
-* **[Project 1 (World Explorer Game - Algorithms)](https://jonathanchowjh.com)**
-* **[Project 2 (FaceBook - React/Node App)](https://jonathanchowjh.com)**
-* **[Project 3 (WeightLoss App - React/Rails App)](https://jonathanchowjh.com)**
+#### Other Projects:
+* **Project 1 (World Explorer Game - Algorithms)**
+* **[Project 2 (FaceBook - React/Node App)](https://github.com/john-97/project-2-facebook)**
+* **[Project 3 (WeightLoss App - React/Rails App)](https://github.com/john-97/spyder)**
 
 ---
 
