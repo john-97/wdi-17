@@ -9,7 +9,13 @@ class SideBar extends Component {
     generateFriendsList(){
         return this.props.store.chats.map(ele => {
             return(
-                <li key={ele.chat_id}><NavLink to={`/LinkedUp/chat/${this.props.store.user.user_id}/${ele.chat_id}`}>{ele.chat_name}</NavLink></li>
+                <li key={ele.chat_id} className="sidebarChatsLi">
+                    <NavLink 
+                        className="sidebarChats"
+                        to={`/LinkedUp/chat/${this.props.store.user.user_id}/${ele.chat_id}`}>
+                        {ele.chat_name}
+                    </NavLink>
+                </li>
             )
         })
     }

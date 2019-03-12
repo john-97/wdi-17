@@ -76,13 +76,14 @@ class Messages extends Component {
   }
   render() {
     return (
-      <div>
-        <div>
+      <div className="chatMessages">
+        <div className="chatMessagesMessages">
           {this.generateMessages()}
         </div>
-        <div>
+        <div className="inputChat">
           <form onSubmit={this.handleSubmit} name="message">
             <input 
+              className="inputChatInput"
               type="text" 
               placeholder="Tell your Partner whats on your mind"
               name="message"

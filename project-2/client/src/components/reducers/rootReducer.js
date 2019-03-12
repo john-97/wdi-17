@@ -83,6 +83,18 @@ const rootReducer = (state=seed, action) => {
             resume: action.data
         }
     }
+    if(action.type === "NEWSFEED_PACKAGE"){
+        return{
+            ...state,
+            ...action.data
+        }
+    }
+    if(action.type === "RESUME_PACKAGE"){
+        return{
+            ...state,
+            resume: action.data
+        }
+    }
     return state
 }
 export default rootReducer

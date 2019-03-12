@@ -13,6 +13,8 @@ A Mobile Chat Application using a Node.js server with Postgresql Database. The C
 * **Resume**
 * **Other Projects**
 
+![picture](https://i.imgur.com/mac8W5S.png?1)
+
 ---
 
 ### Technologies

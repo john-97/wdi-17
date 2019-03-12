@@ -142,6 +142,7 @@ class ResumeEdit extends Component {
         if(type === "array"){
             return this.state.form[section].map( (obj, num) => {
                 return (<div key={num} className="resumeSection">
+                    {/* delete button */}
                     <div 
                         className="New" 
                         onClick={()=>{this.handleClick({

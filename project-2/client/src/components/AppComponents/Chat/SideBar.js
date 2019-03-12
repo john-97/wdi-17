@@ -10,7 +10,7 @@ class SideBar extends Component {
         console.log(this.props.store.chats)
         return this.props.store.chats.map( chat => {
             return(
-                <div key={chat.chat_id}>
+                <div key={chat.chat_id} className="SidebarItem">
                     <NavLink to={`/LinkedUp/chat/${this.props.store.user.user_id}/${chat.chat_id}`}>
                         {chat.chat_name}
                     </NavLink>
@@ -20,7 +20,7 @@ class SideBar extends Component {
     }
   render(){
     return (
-      <div>
+      <div className="chatSidebar">
           {this.generateChats()}
       </div>
     )

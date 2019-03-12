@@ -10,8 +10,8 @@ class Chat extends Component {
   render() {
     return (
       <div>
-        Chat
-        <div>
+        <div className="chatTitle">Chat</div>
+        <div className="row">
           <SideBar store={this.props.store} />
           <Messages 
             store={this.props.store} 

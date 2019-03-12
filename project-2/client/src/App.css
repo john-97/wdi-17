@@ -32,6 +32,126 @@ body{
 .active{
   color:rgb(192, 21, 21) !important;
 }
+
+/*                Login
+=============================================== */
+
+.Login{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -90px;
+  padding: 10px;
+  min-width: 700px;
+}
+.Login .Logo{
+  width: 20%;
+  font-size: 40px;
+  padding: 10px;
+  font-weight: 900;
+}
+.loginForm{
+  display: flex;
+  flex-direction: row;
+}
+.loginFormItem{
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+.loginFormItem label{
+  font-size: 13px;
+  margin-bottom: -2px;
+}
+.loginFormItem input{
+  background: rgba(255, 255, 255, 0.5);
+}
+.loginFormButton{
+  height: 30px;
+  width: 60px;
+  text-align: center;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+.LoginBody{
+  display: flex;
+  flex-direction: row;
+}
+.SignUpForm{
+  padding: 20px;
+}
+.SignUpForm label{
+  margin: 10px 0 0 10px;
+  font-size: 13px;
+}
+.SignUpInput{
+  margin: 0 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+
+/* CUBE LOGO */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.scene {
+  width: 200px;
+  height: 200px;
+  margin: 80px;
+  perspective: 400px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+  transition: transform 1s;
+}
+
+.cube.show-front  { transform: translateZ(-100px) rotateY(   0deg); }
+.cube.show-right  { transform: translateZ(-100px) rotateY( -90deg); }
+.cube.show-back   { transform: translateZ(-100px) rotateY(-180deg); }
+.cube.show-left   { transform: translateZ(-100px) rotateY(  90deg); }
+.cube.show-top    { transform: translateZ(-100px) rotateX( -90deg); }
+.cube.show-bottom { transform: translateZ(-100px) rotateX(  90deg); }
+
+.cube__face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  line-height: 200px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.cube__face--front  { background: rgba(0, 183, 255, 0.7); }
+.cube__face--right  { background: hsla( 60, 100%, 50%, 0.7); }
+.cube__face--back   { background: hsla(120, 100%, 50%, 0.7); }
+.cube__face--left   { background: hsla(180, 100%, 50%, 0.7); }
+.cube__face--top    { background: hsla(240, 100%, 50%, 0.7); }
+.cube__face--bottom { background: hsla(300, 100%, 50%, 0.7); }
+
+.cube__face--front  { transform: rotateY(  0deg) translateZ(100px); }
+.cube__face--right  { transform: rotateY( 90deg) translateZ(100px); }
+.cube__face--back   { transform: rotateY(180deg) translateZ(100px); }
+.cube__face--left   { transform: rotateY(-90deg) translateZ(100px); }
+.cube__face--top    { transform: rotateX( 90deg) translateZ(100px); }
+.cube__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+label { margin-right: 10px; }
+
+
 /*                HEADER
 =============================================== */
 #header{
@@ -69,6 +189,20 @@ body{
   font-size: 20px;
   font-weight: 600;
 }
+
+/*                HEADER
+=============================================== */
+.sidebarChatsLi{
+  list-style: none;
+}
+.sidebarChats{
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  color: grey;
+  margin-left: -30px;
+}
+
 /*                Resume Edit
 =============================================== */
 .ResumeEditForm{
@@ -210,3 +344,42 @@ input:focus{
 
 /*                Chat
 =============================================== */
+
+.chatMessages{
+  min-width: 400px;
+  height: 600px;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgb(221, 221, 221);
+  padding: 10px;
+  position: relative;
+}
+.chatMessagesMessages{
+  overflow: scroll;
+  height: 500px;
+}
+.chatSidebar{
+  min-width: 180px;
+  background: rgba(255, 255, 255, 1);
+  padding: 10px;
+  overflow: scroll;
+  height: 600px;
+  border: 1px solid rgb(221, 221, 221);
+}
+.SidebarItem{
+  padding: 5px;
+}
+.inputChat{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.inputChat input{
+  border-radius: 4px;
+}
+.inputChatInput{
+  width: 300px;
+}
+.chatTitle{
+  font-size: 30px;
+  font-weight: 700;
+}

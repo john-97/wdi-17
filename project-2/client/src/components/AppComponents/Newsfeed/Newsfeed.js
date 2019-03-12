@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+
+// Cookies
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
+
 class Newsfeed extends Component {
   constructor(){
     super()
@@ -12,9 +17,28 @@ class Newsfeed extends Component {
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
-  componentDidMount(){
-    // console.log(this.props.match.params.profileId)
-  }
+  // componentDidMount(){
+  //   let auth = {
+  //     user_id: cookies.get('user_id'),
+  //     hash: cookies.get('hash')
+  //   }
+  //   fetch('http://localhost:1111/newsfeed', {
+  //     method: "POST",
+  //     credentials: "same-origin",
+  //     headers: {
+  //     "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //     auth: auth
+  //     })
+  //   })
+  //   .then(res => res.json())
+  //   .then(res => {
+  //     console.log(res)
+  //     this.props.redux(4, res)
+  //   })
+  //   .catch(res => console.log(res))
+  // }
   generateNewsfeed(){
     // choose newsfeed / Profile
     let newsfeed;
@@ -36,11 +60,16 @@ class Newsfeed extends Component {
       }
       // is the post liked?
       let like = ""
-      if(post.likes.includes(this.props.store.user.user_id)){
-        like="Unlike"
+      if(post.likes !== undefined){
+        if(post.likes.includes(this.props.store.user.user_id)){
+          like="Unlike"
+        }else{
+          like="Like"
+        }
       }else{
         like="Like"
       }
+      
       // return list of post
       return(
         <div className="post" key={post.post_id}>
@@ -53,7 +82,7 @@ class Newsfeed extends Component {
             <span className="postAuthor">{user.name} </span>
           </div>
           <p className="postContent">{post.content}</p>
-          <div class="postFooter">
+          <div className="postFooter">
             <button
               onClick={()=>{this.handleClick("like", post)}}
               className="likeButton">
@@ -86,6 +115,32 @@ class Newsfeed extends Component {
           likes: [],
           content: this.state.post
         })
+        let auth = {
+          user_id: cookies.get('user_id'),
+          hash: cookies.get('hash')
+        }
+        fetch('http://localhost:1111/newsfeed/new', {
+          method: "POST",
+          credentials: "same-origin",
+          headers: {
+          "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            auth: auth,
+            newPost:{
+              user_id: this.props.store.user.user_id,
+              post_id: null,
+              timestamp: new Date(),
+              likes: [],
+              content: this.state.post
+            }
+          })
+        })
+        .then(res => res.json())
+        .then(res => {
+          console.log(res)
+        })
+        .catch(res => console.log(res))
         this.setState({...this.state, post: ""})
         break;
       default:
@@ -93,6 +148,21 @@ class Newsfeed extends Component {
     }
   }
   handleClick(key, data){
+    let auth = {
+      user_id: cookies.get('user_id'),
+      hash: cookies.get('hash')
+    }
+    fetch('http://localhost:1111/newsfeed/likes/edit', {
+          method: "POST",
+          credentials: "same-origin",
+          headers: {
+          "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            auth: auth,
+            post_id: data.post_id
+          })
+        })
     switch (key) {
       case "like":
         if(data.likes.includes(this.props.store.user.user_id)){
@@ -106,31 +176,56 @@ class Newsfeed extends Component {
     }
   }
   render(){
-    // console.log(this.props.store.newsfeed[4].likes)
-    return (
-      <div>
-        <div>
-          <form 
-            className="newPost"
-            name="newPost" 
-            onSubmit={this.handleSubmit}
-            autoComplete="off">
-            <input 
-              style={{width: "300px"}}
-              type="text"
-              name="newPost"
-              placeholder="What's Up!" 
-              onChange={this.handleChange} 
-              value={this.state.post}
-            />
-            <input type="submit" value="Post!" />
-          </form>
-        </div>
-        <div className="newsfeed">
-        {this.generateNewsfeed()}
-        </div>
-      </div>
-    )
+    if(this.props.store !== undefined){
+      if(this.props.store.user !== undefined && 
+        this.props.store.profile !== undefined &&
+        this.props.store.newsfeed !== undefined){
+        if(this.props.store.newsfeed[0] !== undefined){
+          if(this.props.store.newsfeed[0].likes !== undefined){
+            return (
+              <div>
+                <div>
+                  <form 
+                    className="newPost"
+                    name="newPost" 
+                    onSubmit={this.handleSubmit}
+                    autoComplete="off">
+                    <input 
+                      style={{width: "300px"}}
+                      type="text"
+                      name="newPost"
+                      placeholder="What's Up!" 
+                      onChange={this.handleChange} 
+                      value={this.state.post}
+                    />
+                    <input type="submit" value="Post!" />
+                  </form>
+                </div>
+                <div className="newsfeed">
+                  {this.generateNewsfeed()}
+                </div>
+              </div>
+            )
+          }else{
+            return(
+              <div>loading...</div>
+            )
+          }
+        }else{
+          return(
+            <div>loading...</div>
+          )
+        }
+      }else{
+        return(
+          <div>loading...</div>
+        )
+      }
+    }else{
+      return(
+        <div>loading...</div>
+      )
+    }
   }
 }
 const mapDispatchToProps = (dispatch) => {
@@ -142,6 +237,8 @@ const mapDispatchToProps = (dispatch) => {
         dispatch({type: "REMOVE_LIKE", data})
       }else if(key === 3){
         dispatch({type: "ADD_POST", data})
+      }else if(key === 4){
+        dispatch({type: "NEWSFEED_PACKAGE", data})
       }
     }
   }
