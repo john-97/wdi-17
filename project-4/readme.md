@@ -14,7 +14,7 @@ A Mobile Chat Application using a Node.js server with Postgresql Database. The C
 * **Other Projects**
 
 
-<img src="https://i.imgur.com/mac8W5S.png?1" alt="drawing" width="200"/>
+<img src="https://i.imgur.com/mac8W5S.png?1" alt="drawing" width="300"/>
 
 ---
 
