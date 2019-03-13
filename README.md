@@ -1,4 +1,4 @@
-# Jonathan Chow WDI Projects
+# Jonathan Chow's WDI Projects
 
 ---
 
