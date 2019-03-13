@@ -1,9 +1,9 @@
 # Chattie (A Mobile Chat Application)
+#### A Mobile Chat Application (using React-Native)
 
 ---
 
 ### Overview
-#### A Mobile Chat Application (using React-Native)
 A Mobile Chat Application using a Node.js server with Postgresql Database. The Capstone Project for my General Assembly Web Development Immersive Programme, I found myself using much of what I have learnt with a mixture of Technologies to make an intuitively simple and yet considerably complex mobile application. Lets take a dive a little deeper into the App shall we???
 
 <p align="center">
