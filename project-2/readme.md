@@ -78,6 +78,11 @@ nodemon
 ---
 
 ### About Me
-I have hosted some of my projects at [jonathanchowjh.com](https://jonathanchowjh.com) and my Resume can be found at [jonathanchowjh.com/resume](https://jonathanchowjh.com/resume)
+You can find my personal webpage at [jonathanchowjh.com](https://jonathanchowjh.com) and my Resume at [jonathanchowjh.com/resume](https://jonathanchowjh.com/resume). If you have any questions, please do not hesitate to contact me at +65 938 57577 or at jonathanchowjh@gmail.com.
 
+#### Links
+* **[Personal Webpage](https://jonathanchowjh.com)**
+* **[LinkedIn](www.linkedin.com/in/jonathan-chow-558121155/)**
+* **[GA profile](http://profiles.generalassemb.ly/jonathan-chow)**
+* **[github](github.com/john-97 )**
 
