@@ -13,8 +13,9 @@ A Mobile Chat Application using a Node.js server with Postgresql Database. The C
 * **Resume**
 * **Other Projects**
 
-
-<img src="https://i.imgur.com/mac8W5S.png?1" alt="drawing" width="300"/>
+<p align="center">
+  <img src="https://i.imgur.com/mac8W5S.png?1" width="350" title="hover text">
+</p>
 
 ---
 
@@ -32,7 +33,7 @@ A Mobile Chat Application using a Node.js server with Postgresql Database. The C
 ### Installation (For Opening in Android)
 #### Front-End Set Up
 * **Downloading the Application** 
-using git clone https://github.com/john-97/wdi-17.git
+```git clone https://github.com/john-97/wdi-17.git```
 * **Downloading Android Studio** 
 This shouldnt be tough following the instructions at this Web Page, under the tab **Building Projects with Native Code**: https://facebook.github.io/react-native/docs/getting-started 
 * **Opening AVD(Android Virtual Device)** 
@@ -78,7 +79,13 @@ CREATE DATABASE chattie;
 cd project-4/server/dummy
 psql -U {YOUR USERNAME} -d chattie -f tables.sql
 psql -U {YOUR USERNAME} -d chattie -f seed.sql
+
+// Config in db.js
+cd project-4/server/
+nano db.js
+change configs.user to {YOUR USERNAME}
 ```
+
 * **Starting Backend Server**
 Go into the root of the cloned folder before doing the following:
 ```
@@ -91,7 +98,8 @@ nodemon
 ---
 
 ### Other Projects
-Currently unavailable...
+* **[Personal Webpage](https://jonathanchowjh.com)**
+* **[LinkedUp](https://github.com/john-97/wdi-17/tree/master/project-2)**
 
 ---
 
