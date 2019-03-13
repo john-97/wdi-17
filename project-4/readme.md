@@ -6,13 +6,6 @@
 #### A Mobile Chat Application (using React-Native)
 A Mobile Chat Application using a Node.js server with Postgresql Database. The Capstone Project for my General Assembly Web Development Immersive Programme, I found myself using much of what I have learnt with a mixture of Technologies to make an intuitively simple and yet considerably complex mobile application. Lets take a dive a little deeper into the App shall we???
 
-#### Contents
-* **Overview**
-* **Installation**
-* **Main Technologies**
-* **Resume**
-* **Other Projects**
-
 <p align="center">
   <img src="https://i.imgur.com/mac8W5S.png?1" width="350" title="hover text">
 </p>
