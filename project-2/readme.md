@@ -54,6 +54,11 @@ CREATE DATABASE linkedup;
 cd project-2/server/dummy
 psql -U {YOUR USERNAME} -d linkedup -f tables.sql
 psql -U {YOUR USERNAME} -d linkedup -f seed.sql
+
+// Config in db.js
+cd project-4/server/
+nano db.js
+change configs.user to {YOUR USERNAME}
 ```
 * **Starting Backend Server**
 Go into the root of the cloned folder before doing the following:
